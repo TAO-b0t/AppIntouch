@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recommended Recipes — สูตรอาหารแนะนำ</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="recipes" aria-labelledby="title">
+        <svg class="decoration left" viewBox="0 0 150 300" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="3">
+                <path
+                    d="M25 32l24-15 20 34-25 15zM48 63l38 65q8 14 17 7t0-18L67 57M36 41l15-9M42 50l15-9M12 222q55-30 118-21l-2 13-116 21zM25 249v46m93-65v65M55 207l-7-22 23-5-4 21" />
+                <path d="M22 158v10m0 18v10M4 177h10m18 0h10M8 163l7 7m16 15l7 7" />
+            </g>
+        </svg>
+        <svg class="decoration sun" viewBox="0 0 300 180" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="3">
+                <circle cx="150" cy="50" r="34" />
+                <path
+                    d="M150 0v-35m0 135v35M100 50H25m175 0h75M113 13L65-35m122 122 48 48M187 13l48-48m-122 122-48 48M105 30 35 0m160 70 70 30M130 95l-25 65m65-145 25-65M105 70l-70 30m160-70 70-30M170 95l25 65" />
+            </g>
+        </svg>
+        <header>
+            <div>
+                <h1 id="title">RECOMMENDED</h1>
+                <p class="script">Recipes</p>
+            </div>
+            <div class="controls"><button id="previous" aria-label="เลื่อนสูตรก่อนหน้า">&#8592;</button><button
+                    id="next" aria-label="เลื่อนสูตรถัดไป">&#8594;</button><button id="pause"
+                    aria-label="หยุดเลื่อนอัตโนมัติ" aria-pressed="false">Ⅱ</button></div>
+        </header>
+        <div class="carousel" tabindex="0" aria-label="สูตรอาหารแนะนำ เลื่อนแนวนอนเพื่อดูเพิ่มเติม">
+            <div class="track" id="track"></div>
+        </div>
+        <footer><span>GOOD FOOD, GOOD MOOD</span><span>เลือกการ์ดเพื่อดูสูตรอาหาร <span
+                    aria-hidden="true">↗</span></span></footer>
+    </main>
+    <dialog id="recipe-dialog"><button class="close" aria-label="ปิดรายละเอียด">×</button><span class="eyebrow">LET’S
+            COOK SOMETHING GOOD</span>
+        <h2 id="recipe-title"></h2>
+        <p id="recipe-meta"></p>
+        <h3>วัตถุดิบ</h3>
+        <ul id="ingredients"></ul>
+        <h3>วิธีทำ</h3>
+        <p id="method"></p><button class="done">พร้อมเข้าครัวแล้ว →</button>
+    </dialog>
+</body>
+
+</html>
